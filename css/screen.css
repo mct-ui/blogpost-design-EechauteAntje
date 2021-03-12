@@ -26,13 +26,13 @@ html {
   font-family: 'droid-serif', Georgia, serif;
   /*font-family: "Inter Web",'Helvetica Neue', Helvetica, arial, sans-serif;*/
   color: #5c6366;
-  padding: 48px 24px 24px;
+  /*padding: 48px 24px 24px;*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  max-width: 42em;
+  /*max-width: 42em;*/
   margin: 0 auto;
 }
 
@@ -47,29 +47,6 @@ body {
   background: #00e6a1;
   color: white;
   text-shadow: none;
-}
-/*
-    components: Author
-*/
-.c-author {
-  display: flex;
-  align-items: center;
-  margin-bottom: 24px;
-  gap: 16px;
-}
-.c-author__image {
-  width: 56px;
-  height: 56px;
-  border-radius: 100%;
-}
-.c-author__name,
-.c-author__meta {
-  margin-bottom: 0;
-}
-.c-author__meta {
-  font-style: 14px;
-  font-family: 'Inter', 'Helvetica Neue', Helvetica, arial, sans-serif;
-  line-height: 24px;
 }
 
 /*
@@ -215,6 +192,84 @@ a:focus {
 /* Extra large devices (large desktops, 1200px and up) */
 
 @media (min-width: 1200px) {
+}
+/*
+  components: article
+*/
+.c-article__header,
+.c-article__body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.c-article__header {
+  padding: 24px 24px 0;
+}
+
+.c-article__body {
+  padding: 0 24px;
+}
+@media (min-width: 768px) {
+  .c-article__header {
+    padding: 48px 48px 24px;
+  }
+  .c-article__author {
+    padding-bottom: 24px;
+  }
+  .c-article__body {
+    padding: 24px 48px;
+  }
+}
+@media (min-width: 992px) {
+  .c-article__body {
+    display: flex;
+    gap: 24px;
+  }
+  .c-article__author {
+    width: 25%;
+  }
+  .c-article__content {
+    width: 75%;
+  }
+}
+@media (min-width: 992px) {
+  .c-author {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+/*
+    components: Author
+*/
+.c-author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+.c-author__image {
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+}
+.c-author__name,
+.c-author__meta {
+  margin-bottom: 0;
+}
+.c-author__meta {
+  font-style: 14px;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, arial, sans-serif;
+  line-height: 24px;
+}
+
+/*
+    Utilities: max-width
+    --- 
+    Utility classes to put specific max widths onto elements.
+*/
+.u-max-width-sm {
+  max-width: 36em;
 }
 
 /*
