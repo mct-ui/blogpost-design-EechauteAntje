@@ -85,6 +85,10 @@ h2 {
   line-height: 32px;
   margin: 0 0 24px;
 }
+/* * universal selector  een element dat er ommiddelijk voorstaat + de h2*/
+*+h2{
+    margin-top: 48px;
+}
 
 h3 {
   font-size: 18px;
